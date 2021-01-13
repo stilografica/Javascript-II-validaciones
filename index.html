@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
+    <!-- Information meta tags -->
+    <meta name="author" content="Miriam Hinojo">
+    <meta name="description" content="Homepage Llambia">
+    <meta name="keywords" content="escuela de cocina en gijón, regalar curso de
+      cocina, regalar experiencia gastronomica">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="images/brand/favicon-llambia.svg">
+    <!--FONT AWESOME ICONS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Title website -->
+    <title>Llambia, aula gastronómica</title>
+  </head>
+  <body style="overflow-x: hidden;">
+    <!--HEADER SECTION-->
+    <header>
+      <!--Alert with close button via Javascript-->
+      <article class="alert alert-info mb-0 rounded-0" id="myAlert">
+        <strong>Gana un fin de semana romántico en Llambia</strong> con todos
+        los gastos pagados para dos personas en un paraíso único, participa en
+        nuestra página de <a href="#" target="_blank" class="alert-link">Facebook</a>
+        <!--Close button(.classes is necessary so that its closure is independent of the closure of the modal)-->
+        <button type="button" class="close closes">&times;</button>
+      </article>
+      <!--Nav: Main menu expands from xl screens to avoid overlapping elements on large screens-->
+      <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <!--Logo-->
+        <a class="navbar-brand" href="#"><img class="w-75"
+            src="images/brand/logotipo-llambia-white.svg" alt="logotipo
+            Llambia"></a>
+        <!--Hamburger button for mobile-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <article class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <!-- Menu -->
+          <ul class="navbar-nav mr-auto">
+            <!--Dropdown item-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-uppercase
+                font-weight-light" href="#" id="dropdown01"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Cursos presenciales</a>
+              <!--Subitems-->
+              <section class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Recetas Michelín</a>
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Postres de autor</a>
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Arroces Internacionales</a>
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Arroces nacionales</a>
+                <!--Divider to separate the section-->
+                <section class="dropdown-divider"></section>
+                <!--Badge-pill to highlight the product-->
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Trampantojos <span class="badge-pill badge-success
+                    small">New</span></a>
+              </section>
+            </li>
+            <!--Dropdown item-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-uppercase
+                font-weight-light" href="#" id="dropdown02"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Cursos online</a>
+              <!--Subitems-->
+              <section class="dropdown-menu" aria-labelledby="dropdown02">
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Postres asturianos</a>
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Fast food</a>
+                <a class="dropdown-item text-uppercase font-weight-light"
+                  href="#">Platos de fiesta</a>
+              </section>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase font-weight-light" href="#">Contacto</a>
+            </li>
+            <!--Login button with modal-->
+            <li class="nav-item">
+              <!--User icon-->
+              <a class="nav-link text-uppercase text-secondary
+                font-weight-light" id="myLogin" href="#"><i class="fas fa-user"></i>
+                Escuela</a>
+              <!-- MODAL -->
+              <article class="modal fade" id="myModal">
+                <section class="modal-dialog">
+                  <article class="modal-content">
+                    <!-- Modal Header -->
+                    <section class="modal-header">
+                      <h5 class="modal-title">Escuela Llambia</h5>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </section>
+                    <!-- Modal body -->
+                    <section class="modal-body">
+                      <!--Buttons login or validate code-->
+                      <button type="button" class="btn btn-success" id="login">Acceso
+                        alumnos</button>
+                      <button type="button" class="btn btn-light" id="registre">¿Eres
+                        nuevo?</button>
+                      <!--Collapse 1-->
+                      <article class="collapse show collapse1">
+                        <!--Information-->
+                        <p class="text-info pt-2">Encuentra tus datos de acceso
+                          en el correo de bienvenida.</p>
+                        <!--NIVELL 1 Login-->
+                        <form method="POST" action="#" id="loginForm" onsubmit="return loginValidate()" name="myLoginForm">
+                          <label for="emailLogin">Email:</label>
+                          <article class="input-group mb-3">
+                            <!--Email input-->
+                            <input type="email" class="form-control"
+                              placeholder="Escribe tu e-mail"
+                              aria-label="Email"
+                              aria-describedby="basic-addon1" id="emailLogin" name="emailLogin">
+                            <section class="invalid-feedback" id="errorEmail"></section>
+                          </article>
+                          <!--Password input-->
+                          <article class="form-group">
+                            <label for="passwordLogin">Contraseña:</label>
+                            <input type="password" class="form-control"
+                              placeholder="Escribe tu contraseña" id="passwordLogin" name="passwordLogin">
+                            <section class="invalid-feedback" id="errorPassword"></section>
+                          </article>
+                          <!--Check input-->
+                          <article class="form-group form-check">
+                            <label class="form-check-label small">
+                              <input class="form-check-input" type="checkbox">Recuérdame
+                            </label>
+                          </article>
+                          <!--Submit-->
+                          <button type="submit" class="btn btn-primary
+                            btn-block" id="submit">Acceder</button>
+                        </form>
+                      </article>
+                      <!--Collapse 2: code validation-->
+                      <article class="collapse collapse2">
+                        <!--NIVELL 1 Registre-->
+                        <form method="POST" action="#" id="registreForm" onsubmit="return registreValidate()" name="myRegistreForm">
+                          <!--Warning information-->
+                          <label for="code" class="bg-warning mt-3 px-2">
+                            Importante: Compra tu curso antes de registrarte</label><br />
+                            <label for="emailRegistre">Email:</label>
+                            <article class="input-group mb-3">
+                              <!--Email input-->
+                              <input type="email" class="form-control"
+                                placeholder="Escribe tu e-mail"
+                                aria-label="Email"
+                                aria-describedby="basic-addon1" id="emailRegistre" name="emailRegistre">
+                              <section class="invalid-feedback" id="erroremailRegistre"></section>
+                            </article>
+                            <!--Password input-->
+                            <article class="form-group">
+                              <label for="passwordRegistre">Contraseña:</label>
+                              <input type="password" class="form-control"
+                                placeholder="Escribe tu mejor contraseña" id="passwordRegistre" name="passwordRegistre">
+                              <section class="invalid-feedback" id="errorpasswordRegistre"></section>
+                            </article>
+                            <!--Repeat password-->
+                            <article class="form-group">
+                              <label for="passwordRepeat">Repite tu contraseña:</label>
+                              <input type="password" class="form-control"
+                                placeholder="Repite tu contraseña" id="passwordRepeat" name="passwordRepeat">
+                              <section class="invalid-feedback" id="errorpasswordRepeat"></section>
+                            </article>
+                            <!--Provincia selection-->
+                            <article class="form-group">
+                              <label for="inputProvince">Provincia:</label>
+                               <select id="inputProvince" class="form-control">
+                              <option selected value=""></option>
+                              <option>Asturias</option>
+                              <option>Barcelona</option>
+                              <option>Gerona</option>
+                              <option>Tarragona</option>
+                              <option>Lérida</option>
+                              <option>Otra provincia</option>
+                              </select>
+                              <section class="invalid-feedback" id="errorProvince"></section>
+                            </article>
+                            <!--Submit-->
+                            <button type="submit" class="btn btn-primary
+                              btn-block" id="submit">Quiero registrarme</button>
+                        </form>
+                      </article>
+                    </section>
+                    <!-- Modal footer -->
+                    <section class="modal-footer">
+                      <!--Close button-->
+                      <button type="button" class="btn btn-danger data-dismiss="modal">Cerrar</button>
+                    </section>
+                  </article>
+                </section>
+              </article>
+              <!-- /END MODAL -->
+            </li>
+            <!--Cart button-->
+            <li class="nav-item">
+              <!--Cart icon-->
+              <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>
+                <!--Pill with number item in the cart-->
+                <span class="badge badge-secondary badge-pill">3</span></a>
+            </li>
+          </ul>
+          <!-- /End items Menu -->
+          <!--Search Form Nivell 1-->
+          <form class="form-inline my-2 my-lg-0" method="POST" action="#" id="searchForm" onsubmit="return searchValidate()" name="mySearchForm">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar curso" aria-label="Search" id="search" name="search">
+            <section class="invalid-tooltip" id="errorSearch"></section>
+            <button class="btn btn-secondary btn-sm my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </article>
+      </nav>
+      <!-- /END NAV -->
+    </header>
+    <!-- /END HEADER -->
+    <!--MAIN INFORMATION-->
+    <main>
+      <!-- START JUMBOTRON | CALL TO ACTION MESSAGE -->
+      <article class="jumbotron d-flex align-items-center rounded-0"
+        style="height: 25.500rem; background:
+        url('./images/hero-platos-autor.jpg') no-repeat center/cover;">
+        <section class="container">
+          <!--Title marketing-->
+          <h1 class="text-white font-weight-light pt-md-5 pb-md-2">Disfruta de
+            una<br />experiencia de sabores<br /><span>en el paraíso</span></h1>
+          <p>
+            <!--Button with bootstrap icon-->
+            <a class="btn btn-secondary btn-lg" href="#" role="button">Quiero
+              ver los cursos </a>
+          </p>
+        </section>
+      </article>
+      <!-- /END JUMBOTRON -->
+      <!-- START COMPANY INFORMATION -->
+      <article class="container">
+        <section class="row align-items-center">
+          <article class="d-none d-lg-flex col-lg-5"><img class="rounded
+              img-fluid" src="images/playa-de-torimbia.jpg" alt="Paisaje cercano
+              a Llambia"></article>
+          <article class="col-lg-7"><h2 class="display-4"><span>Llambia</span></h2>
+            <p class="lead">En llingua asturiana, significa «elaboraciones que
+              endulzan el paladar» y qué mejor nombre para <strong>nuestra aula
+                gastronómica liderada por David Manrique, finalista de
+                Masterchef.</strong><br />Nuestro objetivo es que cada uno de
+              nuestros alumnos disfrute de esos ricos platos que hacen de la
+              gastronomía el mejor de los placeres.<br /><b>Te invitamos a que
+                vivas una experiencia única en un lugar emblemático, rodeado de
+                verdes prados.</b><br />
+              <!--About us button-->
+              <a class="btn btn-secondary mt-2" href="#" role="button">Quiero
+                conoceros</a>
+            </p>
+          </article>
+        </section>
+      </article>
+      <!-- /END COMPANY INFORMATION -->
+      <!-- START PRODUCT SECTION -->
+      <article class="container my-5">
+        <h2 class="text-center mb-3">Cursos mejor valorados</h2>
+        <!-- Start Card Group -->
+        <article class="card-deck d-block d-lg-flex">
+          <!--Product num1-->
+          <section class="card">
+            <!--Product image-->
+            <img class="card-img-top"
+              src="./images/products/pasteleria-asturiana.jpg" alt="Pastel
+              tradicional asturiano">
+            <article class="card-body">
+              <!--Product name-->
+              <p class="text-center"><span class="badge badge-secondary
+                  text-white">Online</span></p>
+              <h3 class="card-title text-center">Postres Asturianos </h3>
+              <p class="card-text lead text-center">35€</p>
+              <!--Button with bootstrap icon-->
+              <button type="button" class="btn btn-secondary btn-block"
+                data-toggle="tooltip" data-placement="bottom" title="Ahora un
+                25% de dto.">Lo quiero</button>
+            </article>
+          </section>
+          <!--Product num2-->
+          <section class="card">
+            <!--Product image-->
+            <img class="card-img-top"
+              src="./images/products/recetas-michelin.jpg" alt="Plato con comida
+              de autor">
+            <article class="card-body">
+              <!--Product name-->
+              <p class="text-center"><span class="badge badge-secondary
+                  text-white">Presencial</span></p>
+              <h3 class="card-title text-center">Recetas Michelín</h3>
+              <p class="card-text lead text-center">35€</p>
+              <!--Button with bootstrap icon-->
+              <button type="button" class="btn btn-secondary btn-block"
+                data-toggle="tooltip" data-placement="bottom" title="Ahora un
+                25% de dto.">Lo quiero</button>
+            </article>
+          </section>
+          <!--Product num3-->
+          <section class="card">
+            <!--Product image-->
+            <!--Top image-->
+            <img class="card-img-top" src="./images/products/fast-food.jpg"
+              alt="Plato cómida rápida autor">
+            <article class="card-body">
+              <!--Product name-->
+              <p class="text-center"><span class="badge badge-secondary
+                  text-white">Online</span></p>
+              <h3 class="card-title text-center">Fast Food</h3>
+              <p class="card-text lead text-center">35€</p>
+              <!--Button with bootstrap icon-->
+              <button type="button" class="btn btn-secondary btn-block"
+                data-toggle="tooltip" data-placement="bottom" title="Ahora un
+                25% de dto.">Lo quiero</button>
+            </article>
+          </section>
+        </article>
+        <!-- /End Card Group-->
+      </article>
+      <!-- /END PRODUCT SECTION -->
+    </main>
+    <!--/END MAIN INFORMATION-->
+    <!-- START SECONDARY INFORMATION-->
+    <aside>
+      <!-- START JUMBOTRON | CALL TO ACTION MESSAGE -->
+      <article class="jumbotron jumbotron-fluid bg-primary">
+        <section class="container">
+          <!--Title-->
+          <h2 class="text-white text-center">Regala una experiencia de sabor</h2>
+          <p class="lead text-white text-center">Fin de semana de ensueño en
+            Asturias con dos cursos de autor y una cata de vinos</p>
+          <!--Button-->
+          <p class="text-center"><a class="btn btn-secondary mt-2" href="#"
+              role="button">Quiero comprarlo</a>
+            <!--Bootstrap popover with tag <a> for proper cross-browser and cross-platform behavior -->
+            <a tabindex="0" class="btn btn-secondary active mt-2" role="button"
+              data-toggle="popover" title="Descuento de Navidad 15%"
+              data-content="Pon este código en la página de pago: llambia2020">Quiero
+              mi descuento</a></p>
+        </section>
+      </article>
+      <!-- /END JUMBOTRON -->
+      <!-- START CAROUSEL | Image carousel adapted to review carousel -->
+      <article class="container mb-5">
+        <h2 class="text-center mb-3">Alumnos satisfechos</h2>
+        <article id="myCarousel" class="carousel slide w-md-50 mx-auto"
+          data-ride="carousel">
+          <!--All reviews-->
+          <section class="carousel-inner">
+            <!--Review num1-->
+            <article class="carousel-item active">
+              <section class="container">
+                <article class="text-center text-primary w-75 mx-auto">
+                  <!--Image review-->
+                  <img class="rounded-circle w-25 p-lg-4"
+                    src="images/reviews/Lidia.jpg" alt="Alumna sonriendo">
+                  <h3 class="lead">Lidia, Zaragoza</h3>
+                  <p class="font-weight-normal">Me regalaron un curso online con
+                    Llambia y me fascinó. Muy bien explicado, con todo lujo de
+                    detalles. Puedes consultar dudas y te hacen un regalo tras
+                    finalizar el curso. Quedé encantada, repetiré.</p>
+                </article>
+              </section>
+            </article>
+            <!--Review num2-->
+            <article class="carousel-item">
+              <section class="container">
+                <article class="text-center text-primary w-75 mx-auto">
+                  <img class="rounded-circle w-25 p-lg-4"
+                    src="images/reviews/Ernesto.jpg" alt="Alumna sonriendo">
+                  <h3 class="lead">Ernesto, Barcelona</h3>
+                  <p class="font-weight-normal">El mejor fin de semana de mi
+                    vida, fui con mi pareja e hicimos dos cursos de cocina y una
+                    cata de vinos. Impresionante la formación, el lugar y el
+                    trato. Sin duda, lo recomiendo al 100%. Repitiría sin duda.</p>
+                </article>
+              </section>
+            </article>
+          </section>
+          <!--Buttons carousel's scroll buttons-->
+          <!--Previous button-->
+          <a class="carousel-control-prev" href="#myCarousel" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon bg-primary rounded-circle"
+              aria-hidden="true"></span>
+            <!--information for screen reader-->
+            <span class="sr-only">Previous</span>
+          </a>
+          <!--Next button-->
+          <a class="carousel-control-next" href="#myCarousel" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon bg-primary rounded-circle"
+              aria-hidden="true"></span>
+            <!--information for screen reader-->
+            <span class="sr-only">Next</span>
+          </a>
+        </article>
+      </article>
+      <!-- /END CAROUSEL -->
+      <!--PARTNERS SECTION-->
+      <article class="bg-primary py-3">
+        <!--Column in small screens and row in large screens-->
+        <section class="row flex-column align-items-center flex-lg-row">
+          <img class="col-4 col-lg-2 p-2 px-md-5"
+            src="images/partners/bosch.png" alt="logotipo Bosch">
+          <img class="col-4 col-lg-2 p-2 px-md-5"
+            src="images/partners/caviaroli.png" alt="logotipo Caviaroli">
+          <img class="col-4 col-lg-2 p-2 px-md-5"
+            src="images/partners/heineken.png" alt="logotipo Heineken">
+          <img class="col-4 col-lg-2 p-2 px-md-5"
+            src="images/partners/neolith.png" alt="logotipo Neolith">
+          <img class="col-4 col-lg-2 p-2 px-md-5"
+            src="images/partners/lekue.png" alt="logotipo Lekue">
+          <img class="col-4 col-lg-2 p-2 px-md-5"
+            src="images/partners/gallinablanca.png" alt="logotipo Gallina Blanca">
+        </section>
+      </article>
+      <!-- /END PARTNERS SECTION -->
+    </aside>
+    <!--/END SECONDARY INFORMATION-->
+    <!-- START FOOTER SECTION -->
+    <footer class="container pt-4 my-md-5 pt-md-5 border-top">
+      <article class="row flex-column align-items-center align-items-md-start
+        flex-md-row">
+        <!-- Brand logo -->
+        <section class="col-12 col-md-3 p-md-0 px-lg-5">
+          <img class="img-fluid" src="images/brand/logotipo-llambia.svg"
+            alt="Logotipo Llambia">
+          <!-- Copyright text-->
+          <p class="d-block mb-3 text-muted small">&copy; Llambia</p>
+        </section>
+        <!-- Suscription form -->
+        <section class="col-12 col-md-5 order-md-3">
+          <h4>Suscríbete</h4>
+          <form class="needs-validation" novalidate>
+            <article class="form-group">
+              <!-- Label email-->
+              <label for="email" class="text-muted font-weight-normal">Correo
+                electrónico</label>
+              <!-- Email field -->
+              <input type="email" class="form-control" id="email"
+                placeholder="Escribe tu email" name="email" required>
+              <!-- Correct message -->
+              <section class="valid-feedback">Correcto</section>
+              <!-- Incorrect message-->
+              <section class="invalid-feedback">Correo electrónico incorrecto</section>
+            </article>
+            <!-- Policy checkbox section-->
+            <article class="form-group form-check">
+              <!--Checkbox + policy message-->
+              <input class="form-check-input" type="checkbox" name="remember"
+                required>
+              <p class="text-muted">He leído y acepto la Política de
+                privacidad.</p>
+              <!-- Correct message-->
+              <section class="valid-feedback">Correcto</section>
+              <!-- Incorrect message-->
+              <section class="invalid-feedback">Debes marcar para continuar</section>
+            </article>
+            <!-- Submit button-->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </section>
+        <!-- Legal information -->
+        <section class="col-12 col-md-4 pt-4 pl-md-5 pt-md-0">
+          <h4>Legales</h4>
+          <!-- Legal nav -->
+          <nav>
+            <ul class="list-unstyled">
+              <li><a class="font-weight-normal text-muted" href="#">Política
+                  privacidad</a></li>
+              <li><a class="font-weight-normal text-muted" href="#">Aviso legal</a></li>
+              <li><a class="font-weight-normal text-muted" href="#">Política
+                  cookies</a></li>
+              <li><a class="font-weight-normal text-muted" href="#">Política
+                  general venta</a></li>
+            </ul>
+          </nav>
+        </section>
+      </article>
+      <!-- Button back to top -->
+      <p class="float-right"><a href="#">Arriba</a></p>
+    </footer>
+    <!-- /END FOOTER SECTION -->
+    <!-- JAVASCRIPT SOURCES jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--Custom Javascript-->
+    <script src="js/custom.js"></script>
+    <!-- /END JAVASCRIPT SOURCES -->
+  </body>
+</html>
