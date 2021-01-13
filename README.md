@@ -10,6 +10,11 @@ _Descargar todos los archivos:_
 
 ### Comentarios 📋
 
+_Los formularios validados se encuentran en el menú del header de la web:_
+* **Login: Escuela/acceso alumnos**
+* **Registro: Escuela/¿Eres nuevo?**
+* **Search form**
+
 _En el nivell 3 se ha validado el formulario de login de Llambia con el plugin [JQueryValidation](https://jqueryvalidation.org/)_
 
 ## Construido con 🛠️
