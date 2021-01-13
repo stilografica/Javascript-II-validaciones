@@ -1,0 +1,17 @@
+/*------- START CUSTOM STYLES--------*/
+/*Change the main and secondary colors*/ 
+$chocolate: #26292e;
+$latte: #af9f84;
+
+$primary:       $chocolate;
+$secondary:     $latte;
+$dark:          $chocolate;
+
+/*Hero background image background*/ 
+.jumbotron-fluid{
+    background-image: url("../images/hero-risoto-astur.jpg");
+    background-position: left;
+    background-blend-mode: multiply;
+}
+
+/* -------/END CUSTOM STYLES-------- */  
